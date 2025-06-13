@@ -7,22 +7,24 @@
 }
 
 body {
-  background: linear-gradient(120deg, #1f231e, #000000);
+  background: url('back1.jpeg');
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.background-design{
-  position: absolute;
-  top: -100px;
-  left: -100px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(40, 167, 69, 0.4), transparent 70%);
-  filter: blur(100px);
-  z-index: 0;
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+             url('back1.jpeg') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
 }
 
 .password-container {
@@ -44,7 +46,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   font-size: 0.85rem;
-  color: #0e7b1e;
+  color: #3c840c;
   text-decoration: none;
 }
 
@@ -58,7 +60,7 @@ h1{
 }
 
 .login-container {
-    background: #28a745;
+    background:#3c840c;
     padding: 2rem;
     color: white;
     border-radius: 12px;
@@ -70,7 +72,7 @@ h1{
 .login-container h2 
 {
   margin-bottom: 1rem;
-  color: #333;
+  color: #265606;
 }
 
 .login-container input {
@@ -94,10 +96,121 @@ h1{
 }
 
 .login-container button:hover {
-  background-color: #888db4;
+  background-color: #2d3c2c;
+}
+
+.signup-link a {
+  color: #2d3c2c;
+}
+
+.signup-link a:hover {
+  color: #152014;
+}
+
+form {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
 }
 
 .signup-link {
   margin-top: 1rem;
   font-size: 0.9rem;
+}
+
+.topsignup-link {
+  color: white;
+  font-size: 0.9rem;
+  transform: translateY(-5%);
+}
+
+.topbutton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.signup-button {
+  padding: 6px 12px;
+  background-color: #3c840c;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transform: translateY(-5%);
+}
+
+.signup-button:hover {
+  background-color:#265606;
+}
+
+.bugnova-logo {
+  position: absolute;
+  top: 1px;
+  right: 1250px;
+  transform:translateY(-30%);;
+  
+}
+
+.bugnova-logo .logo {
+  width: 350px;
+  height: auto;
+}
+
+.login-button {
+  padding: 6px 12px;
+  background-color: #3c840c;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transform: translateY(-5%);
+}
+
+.login-button:hover {
+  background-color: #265606;
+}
+
+#registerForm input {
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.8rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+#codeForm, #passwordForm {
+  transition: all 0.3s ease;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.8rem;
+  margin: -0.5rem 0 1rem 0;
+  display: none;
+}
+
+.success-message {
+  color: #3c840c;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.footer{
+  color: white;
+  font-size: 0.7rem;
+  position: fixed;
+  text-align: center;
+  transform: translateY(-70%);
+  bottom: 0;
 }

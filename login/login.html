@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login | Bugnova</title>
+  <title>Login | BugNova</title>
   <link rel="stylesheet" href="loginstyle.css" />
+  <script src="user_authentication.js" defer></script>
 </head>
 
 <body>
-
   <div class="background-design"></div>
 
   <div class="login-container">
-    <h1>Welcome back! </h1>
+    <h1>Welcome back! </h1>  <!-- Changed heading -->
 
     <form id="loginForm">
-      <input type="text" id="email" placeholder="Email" required />
-
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Email" required />  <!-- Changed to email type -->
+      
+      <label for="password">Password</label>
       <div class="password-container">
         <input type="password" id="password" placeholder="Password" required />
-        <a href="#" class="forgot-link">Forgot Password?</a>
+        <a href="forgotpassword.html" class="forgot-link">Forgot Password?</a>  <!-- Updated link -->
       </div>
 
       <button type="submit">Login</button>
@@ -28,22 +31,18 @@
     <p class="signup-link">Don't have an account? <a href="register.html">Sign up</a></p>
   </div>
 
-  <script>
-    document.getElementById("loginForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const enteredEmail = document.getElementById("email").value;
-      const enteredPassword = document.getElementById("password").value;
+  <div class="topbutton">
+    <p class="topsignup-link">Don't have an account? &nbsp
+      <a href="register.html" class="signup-button">Sign up</a>
+    </p>
+  </div>
 
-      const storedUser = JSON.parse(localStorage.getItem("user"));
+  <div class="bugnova-logo">
+    <img src="buglogo.png" alt="Bugnova Logo" class="logo" />
+  </div>
 
-      if (storedUser && enteredEmail === storedUser.email && enteredPassword === storedUser.password) {
-        alert("Login successful!");
-        window.location.href = "dashboard.html";
-      } else {
-        alert("Invalid email or password.");
-      }
-    });
-  </script>
-
+  <footer class="footer">
+    BugNova 2025. All right reserved. Made by Arwa Abbas
+  </footer>
 </body>
 </html>

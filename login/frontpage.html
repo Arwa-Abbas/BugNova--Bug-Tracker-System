@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BugNova | Modern Bug Tracking</title>
+    <link rel="stylesheet" href="frontpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="buglogo.png" alt="BugNova Logo">
+        </div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#search">Search Bugs</a>
+        </div>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn btn-outline">Login</a>
+            <a href="register.html" class="btn btn-primary">Sign Up</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>The smarter way to track bugs</h1>
+            <p>Resolve issues faster with our intuitive bug tracking system designed for modern development teams.</p>
+            <a href="register.html" class="btn btn-cta">Get Started →</a>
+            <p class="cta-note">Free forever • No credit card required</p>
+        </div>
+    </section>
+
+  <!-- Features -->
+<section id="features" class="features">
+    <div class="feature-card clickable-card" onclick="window.location.href='technicalsupport.html'">
+        <h3>1. Need technical support?</h3>
+        <p>Get help for your development issues.</p>
+        <div class="card-link">Click to submit request →</div>
+    </div>
+    <div class="feature-card clickable-card" onclick="window.location.href='website-issues.html'">
+        <h3>2. Report website issues</h3>
+        <p>File compatibility bugs for web applications.</p>
+        <div class="card-link">Click to report issue →</div>
+    </div>
+    <div class="feature-card highlight">
+        <h3>3. Report product bugs</h3>
+        <p>Requires a BugNova account</p>
+        <a href="register.html" class="btn btn-small">Create Account</a>
+    </div>
+</section>
+
+    <!-- Search -->
+    <section id="search" class="search-section">
+        <h2>Search existing bugs</h2>
+        <div class="search-box">
+            <input type="text" placeholder="Search bug reports...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </section>
+
+    <footer>
+        <p>BugNova 2025. All rights reserved. Made by Arwa Abbas</p>
+    </footer>
+</body>
+</html>
